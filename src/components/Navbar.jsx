@@ -6,13 +6,14 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='navbar_left'>
-        <img src='http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/387c850f1455fab.png'/>
+        
+        <Link to='/'><img src='http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/387c850f1455fab.png'/></Link>
       </div>
       <div className='navbar_right'>
         <ul>
             <Link to='/'><li>HOME</li></Link>
             <Link to='/customers'><li>CUSTOMERS</li></Link>
-            <Link to='/favorites'><li>FAVORITES</li></Link>
+            <Link to='/favorites'><li className='favorite'>FAVORITES <div className='favorite_number'>0</div></li></Link>
         </ul>
       </div>
     </div>

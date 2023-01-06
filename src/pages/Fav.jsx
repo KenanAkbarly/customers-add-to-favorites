@@ -1,21 +1,25 @@
 //  import { Empty } from "antd";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import '../pages/fav.scss'
  const Fav = ()=>{
-    const fav = useSelector((state)=>state.favorite)
+
+    const selectorData =  useSelector(state=>state.cart.favItems)
+
+
     return(
         <div className="fav_conatiner">
             <h2>Shopping Cart</h2>
-            {fav.favItems.length ==0?(<div className="fav-empty">Your Favorite in currently empty
+            {selectorData.length ===0?(<div className="fav-empty">Your Favorite in currently empty
             <div>
-                <Link to='/'><span>Start Shopping</span></Link>
+                <Link to='/customers'><button>Start Shopping</button></Link>
             </div>
             </div>):(<div>
             <div className="title">
-                <h3 className="product-title">Count:<span></span></h3>
-                <ol>
-                 {fav.favItems?.map(favItem=>(
-                    <li key={favItem.id}>{favItem.id}</li>
+                <h3 className="product-title">Count:<span>{selectorData.length}</span></h3>
+                <ol type="1">
+                 {selectorData?.map(favItem=>(
+                    <li key={favItem.id}><span>{favItem.id}</span><span>{favItem.companyName}</span></li>
                  ))}
                 </ol>
             </div>

@@ -59,8 +59,9 @@ const getRandomuserParams = (params) => ({
   ...params,
 });
 const Customers = () => {
-  const favItems = useSelector(state=>state)
-  console.log(favItems);
+  // const favItems = useSelector(state=>{
+  //   console.log('customer',state.cart.favItems.length)
+  // })
   const dispatch = useDispatch()
   // const handleAddToFavorite = (product)=>{
   //   dispatch(addToFav(product))

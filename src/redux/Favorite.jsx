@@ -5,12 +5,12 @@ const initialState = {
   favTotalQuantity: 0,
   favTotalAmount: 0,
 }
-const Favorite = createSlice({
+export const Favorite = createSlice({
   name: "favorite",
   initialState,
   reducers: {
-    addToFav(state,action){
 
+    addToFav(state,action){
       const itemIndex = state.favItems.findIndex((item)=> item.id === action.payload.id)
       if(itemIndex >= 0){
         state.favItems[itemIndex].cartQuantity +=1;

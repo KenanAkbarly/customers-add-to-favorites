@@ -1,0 +1,21 @@
+.fav_conatiner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    // justify-content: center;
+    
+    flex-direction: column;
+    .fav-empty{
+        color: red;
+        margin: 20px 0px;
+        div{
+
+            .shoppingBtn{
+                
+                width: 150px;
+                background-color: red;
+            }
+        }
+    }
+}

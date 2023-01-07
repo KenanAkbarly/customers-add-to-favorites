@@ -1,4 +1,7 @@
 .fav_conatiner{
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
     width: 100%;
     height: 100vh;
     display: flex;
@@ -6,6 +9,10 @@
     // justify-content: center;
     
     flex-direction: column;
+    h2{
+        color: rgb(99, 169, 176);
+        font-size: 30px;
+    }
     .fav-empty{
         color: red;
         margin: 20px 0px;
@@ -16,6 +23,73 @@
                 width: 150px;
                 background-color: red;
             }
+        }
+    }
+    .startShoppingBtn{
+        margin-top: 20px;
+        background-color: rgb(19, 184, 107);
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+        // padding: 15px;paddin
+        padding: 0px 10px;
+        color: white;
+        font-weight: 500;
+    }
+}
+.titile_body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+    button{
+        margin-top: 20px;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(240, 17, 17);
+        color: white;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        &:hover{
+            transform: scale(0.97);
+        }
+    }
+}
+.title{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 50px;
+    width: 500px;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgba(255, 255, 255, 0.062);background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    
+    ol{
+        display: inline-block;
+        
+        li{
+            list-style-type:decimal !important;
+            span{
+                font-size: 18px;
+                
+            }
+            // color: red;
         }
     }
 }

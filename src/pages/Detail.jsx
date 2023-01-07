@@ -1,10 +1,15 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom'
+import { toast } from 'react-toastify';
+import { addToFavDetail } from '../redux/Favorite';
+
 // import { Value } from 'sass'
 import './detail.scss'
 const Detail = () => {
+   const dispatch = useDispatch()
     const {id} = useParams();
     const [data,setData] = useState();
     const [loading ,setLoading] = useState(true)
@@ -29,13 +34,20 @@ const Detail = () => {
             <p><span>Customer Address:</span><span>{data && data.address.street}</span></p>
             <p><span>Customer Phone:</span><span>{data && data.address.phone}</span></p>
             <p><span>Customer Postal Code:</span><span>{data && data.address.postalCode}</span></p>
-            <button>Add to favorites</button>
+            <button onClick={()=>{
+      dispatch(addToFavDetail(data))
+      console.log('salasm');
+      toast.success(`${data&&data.companyName} added to favorites`,{
+        position:"bottom-left"
+      })
+    }}  >Add to favorites</button>
         </div>
         <Link to='/customers'><button className='goBack' >Go Back</button></Link>
        
        </div>)
      }
     </>
+    
    
   )
 }
